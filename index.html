@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <!--Async used to so page load is not stopped when the request for the script is made-->
+  <script src="scripts/script.js" async></script>
+  <title>D&amp;D Dice Roller</title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      <div class="left">
+        <input type="number" name="numDice" id="numDice" min="1" onchange="updateNumDice()">
+
+        <select name="numSides" id="numSides" onchange="updateNumSides()">
+          <option value="4">d4</option>
+          <option value="6">d6</option>
+          <option value="8">d8</option>
+          <option value="10">d10</option>
+          <option value="12">d12</option>
+          <option value="20">d20</option>
+        </select>
+
+        <button id="button">Roll Dice</button>
+      </div>
+
+      <div class="right">
+        <h3>Total</h3>
+        <div class="total-div">
+          <h3 id="total"></h3>
+        </div>
+
+        <div class="min-max">
+
+          <div class="min-div">
+            <h3>Minimum</h3>
+            <p id="min"></p>
+          </div>
+          <div class="max-div">
+            <h3>Maximum</h3>
+            <p id="max"></p>
+          </div>
+        </div>
+
+        <div class="roll">
+          <h3>Rolls</h3>
+          <p id="rolls"></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
